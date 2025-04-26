@@ -8,8 +8,8 @@ export default function Navbar() {
     <nav className="bg-white shadow-md fixed w-full z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
         <div className="flex items-center">
-          <img src="/images/logo.png" alt="Logo" className="h-10 w-10 mr-2" />
-          <h1 className="text-2xl font-bold text-gray-800">দাওয়াহ কমিউনিটি গোবিন্দগঞ্জ</h1>
+          <img src="/images/logo.png" alt="Logo" className="h-10 w-16 mr-2" />
+          <h1 className="md:text-xl text-gray-800">দাওয়াহ কমিউনিটি গোবিন্দগঞ্জ</h1>
         </div>
         <div className="hidden md:flex space-x-6 text-gray-600">
           <a href="#home" className="hover:text-blue-500">হোম</a>
