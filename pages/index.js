@@ -15,6 +15,7 @@ export default function Home() {
       <Head>
         <title>দাওয়াহ কমিউনিটি গোবিন্দগঞ্জ</title>
         <meta name="description" content="দাওয়াহ কমিউনিটি গোবিন্দগঞ্জ" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       <Navbar />
       <main>
