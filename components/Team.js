@@ -1,10 +1,23 @@
 import { motion } from "framer-motion";
 
 const teamMembers = [
-  { name: "মোঃ ফয়সাল আহমেদ", role: "সভাপতি", img: "/images/team/no_image.jpg" },
-  { name: "ইঞ্জিনিয়ার শাকিল", role: "সহ-সভাপতি", img: "/images/team/no_image.jpg" },
-  { name: "মোঃ জুবায়ের ইসলাম", role: "কার্যকরী সদস্য", img: "/images/team/no_image.jpg" },
+  { name: "ইঞ্জিনিয়ার বাশার অভি", role: "আহবায়ক", img: "/images/team/ovi.jpg" },
+  { name: "আবু সাঈদ সজিব", role: "যুগ্ম আহবায়ক", img: "/images/team/sajib.jpg" },
+  { name: "মাওলানা আবদুল্লাহ", role: "যুগ্ম আহবায়ক", img: "/images/team/abdullah.jpg" },
+  { name: "আর এস রাশেদ", role: "যুগ্ম আহবায়ক", img: "/images/team/rs_rashed.jpg" },
+  { name: "মাওলানা নাজমুস সাকিব", role: "কার্যকরী সদস্য", img: "/images/team/sakib.jpg" },
+  { name: "ইঞ্জিনিয়ার শাকিল", role: "কার্যকরী সদস্য", img: "/images/team/no_image.jpg" },
+  { name: "মোহাম্মদ তালহা আমিন তামিম", role: "কার্যকরী সদস্য", img: "/images/team/no_image.jpg" },
+  { name: "মোহাম্মদ জুবায়ের ইসলাম", role: "কার্যকরী সদস্য", img: "/images/team/jobair.jpg" },
+  { name: "মোহাম্মদ রশিদুল ইসলাম", role: "কার্যকরী সদস্য", img: "/images/team/no_image.jpg" },
+  { name: "মোহাম্মদ শহিদুল ইসলাম", role: "কার্যকরী সদস্য", img: "/images/team/no_image.jpg" },
+  { name: "মোহাম্মদ শাহী", role: "কার্যকরী সদস্য", img: "/images/team/shahi.jpg" },
+  { name: "মোহাম্মদ জাহিদ সরকার", role: "কার্যকরী সদস্য", img: "/images/team/zs_jahid.jpg" },
+  { name: "মোহাম্মদ ফয়সাল", role: "কার্যকরী সদস্য", img: "/images/team/no_image.jpg" },
+  { name: "মোহাম্মদ হালিম", role: "কার্যকরী সদস্য", img: "/images/team/no_image.jpg" },
+  { name: "মোহাম্মদ রাকিবুল হাসান", role: "কার্যকরী সদস্য", img: "/images/team/rakib.jpg" }
 ];
+
 
 export default function Team() {
   return (

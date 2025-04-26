@@ -7,6 +7,7 @@ import Team from "../components/Team";
 import Projects from "../components/Projects";
 import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
+import ContactUs from "../components/ContactUs";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <Team />
         <Projects />
         <Gallery />
+        <ContactUs />
       </main>
       <Footer />
     </div>
