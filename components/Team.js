@@ -18,7 +18,6 @@ const teamMembers = [
   { name: "মোহাম্মদ রাকিবুল হাসান", role: "কার্যকরী সদস্য", img: "/images/team/rakib.jpg" }
 ];
 
-
 export default function Team() {
   return (
     <section id="team" className="py-20 bg-white">
@@ -34,6 +33,9 @@ export default function Team() {
             <motion.div 
               key={index}
               className="bg-gray-100 p-6 rounded-lg text-center shadow hover:shadow-lg transition"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 2.5 }} // Removed delay to trigger animation on scroll
               whileHover={{ scale: 1.05 }}
             >
               <img src={member.img} alt={member.name} className="h-32 w-32 rounded-full mx-auto mb-4 object-cover" />
