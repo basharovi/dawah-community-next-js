@@ -48,14 +48,14 @@ const teamMembers = [
   { 
     name: "ইঞ্জিনিয়ার শাকিল", 
     role: "কার্যকরী সদস্য", 
-    img: "/images/team/no_image.jpg",
+    img: "/images/team/shakil.jpg",
     bio: "",
     social: []
   },
   { 
     name: "মোহাম্মদ তালহা আমিন তামিম", 
     role: "কার্যকরী সদস্য", 
-    img: "/images/team/no_image.jpg",
+    img: "/images/team/tamim.jpg",
     bio: "",
     social: []
   },
