@@ -160,14 +160,6 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-islamic-green-700 mt-10 pt-6 text-center">
           <p className="text-gray-300">&copy; ২০২৫ | দাওয়াহ কমিউনিটি গোবিন্দগঞ্জ | সমস্ত অধিকার সংরক্ষিত</p>
-          <div className="mt-3 flex justify-center items-center space-x-2">
-            <div className="w-8 h-8 bg-islamic-green-700 rounded-full flex items-center justify-center">
-              <FaMosque className="text-islamic-gold-300 text-sm" />
-            </div>
-            <div className="w-8 h-8 bg-islamic-green-700 rounded-full flex items-center justify-center">
-              <FaPray className="text-islamic-gold-300 text-sm" />
-            </div>
-          </div>
         </div>
       </div>
     </footer>
