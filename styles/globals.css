@@ -1,15 +1,231 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Optional: Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-  font-family: 'Noto Sans Bengali', sans-serif; /* Apply Bengali font */
+:root {
+  --islamic-green-50: #f0f9f0;
+  --islamic-green-100: #dcf0dc;
+  --islamic-green-200: #bce3bc;
+  --islamic-green-300: #8ecf8e;
+  --islamic-green-400: #5db85d;
+  --islamic-green-500: #3da13d;
+  --islamic-green-600: #2c822c;
+  --islamic-green-700: #256825;
+  --islamic-green-800: #215321;
+  --islamic-green-900: #1d451d;
+  
+  --islamic-gold-50: #fffaeb;
+  --islamic-gold-100: #fef1c7;
+  --islamic-gold-200: #fee489;
+  --islamic-gold-300: #fdd44a;
+  --islamic-gold-400: #fcbf20;
+  --islamic-gold-500: #f8a202;
+  --islamic-gold-600: #dc7b02;
+  --islamic-gold-700: #b75907;
+  --islamic-gold-800: #94450c;
+  --islamic-gold-900: #7a3a0e;
+  
+  --islamic-blue-50: #eef4ff;
+  --islamic-blue-100: #dbebff;
+  --islamic-blue-200: #c0dbff;
+  --islamic-blue-300: #96c4ff;
+  --islamic-blue-400: #67a4ff;
+  --islamic-blue-500: #3d7dff;
+  --islamic-blue-600: #1959ff;
+  --islamic-blue-700: #0d42e6;
+  --islamic-blue-800: #1136ba;
+  --islamic-blue-900: #153494;
+  
+  --islamic-teal-50: #effcf6;
+  --islamic-teal-100: #c6f7e2;
+  --islamic-teal-200: #8eedc7;
+  --islamic-teal-300: #65d6ad;
+  --islamic-teal-400: #3ebd93;
+  --islamic-teal-500: #27ab83;
+  --islamic-teal-600: #199473;
+  --islamic-teal-700: #147d64;
+  --islamic-teal-800: #0c6b58;
+  --islamic-teal-900: #014d40;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Noto Sans Bengali', sans-serif;
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply font-body text-gray-800 bg-gray-50;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-title;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-islamic-green-800 relative inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply absolute left-0 -bottom-2 h-1 w-1/2 bg-islamic-gold-400 rounded-full;
+  }
+  
+  .section-subtitle {
+    @apply text-xl text-islamic-green-600 mb-12 max-w-2xl;
+  }
+  
+  .islamic-card {
+    @apply bg-white rounded-lg shadow-md p-6 border-t-4 border-islamic-green-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+  }
+  
+  .islamic-button {
+    @apply px-6 py-3 bg-islamic-green-600 text-white rounded-full font-medium hover:bg-islamic-green-700 transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 focus:ring-2 focus:ring-islamic-green-300 focus:ring-offset-2;
+  }
+  
+  .islamic-button-outline {
+    @apply px-6 py-3 border-2 border-islamic-green-600 text-islamic-green-600 rounded-full font-medium hover:bg-islamic-green-50 transition-all duration-300 hover:-translate-y-0.5 focus:ring-2 focus:ring-islamic-green-300 focus:ring-offset-2;
+  }
+  
+  .verse-box {
+    @apply p-6 bg-islamic-green-50 border-l-4 border-islamic-gold-400 rounded-r-lg my-6 relative overflow-hidden;
+  }
+  
+  .verse-box::before {
+    content: '';
+    @apply absolute right-0 top-0 w-24 h-24 bg-islamic-pattern opacity-5;
+  }
+  
+  .featured-box {
+    @apply relative overflow-hidden rounded-xl shadow-lg bg-white border border-gray-100 transition-all duration-300 hover:shadow-xl p-6;
+  }
+  
+  .featured-box::before {
+    content: '';
+    @apply absolute top-0 right-0 w-32 h-32 bg-islamic-pattern opacity-5 -mt-10 -mr-10 transform rotate-45;
+  }
+  
+  .decorative-card {
+    @apply relative overflow-hidden rounded-lg p-6 bg-white shadow-md transition-all duration-300;
+  }
+  
+  .decorative-card::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-islamic-green-500 to-islamic-gold-400;
+  }
+  
+  .nav-item {
+    @apply px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300;
+  }
+  
+  .nav-item-active {
+    @apply text-islamic-green-600 bg-islamic-green-50 relative;
+  }
+  
+  .nav-item-active::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-islamic-green-500 rounded-full;
+  }
+}
+
+@layer utilities {
+  .font-title {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-weight: 700;
+  }
+  
+  .font-body {
+    font-family: 'Noto Sans Bengali', sans-serif;
+  }
+  
+  .font-arabic {
+    font-family: 'Amiri', serif;
+  }
+  
+  .font-arabic-title {
+    font-family: 'Aref Ruqaa', serif;
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0,0,0,0.12);
+  }
+  
+  .bg-islamic-pattern {
+    background-image: url('/patterns/islamic-pattern.svg');
+    background-repeat: repeat;
+  }
+  
+  .bg-geometric-light {
+    background-image: url('/patterns/geometric-light.svg');
+    background-repeat: repeat;
+  }
+  
+  .bg-stars-pattern {
+    background-image: url('/patterns/stars-pattern.svg');
+    background-size: 300px;
+    background-repeat: repeat;
+  }
+  
+  .arabic-pattern-circle {
+    background-image: url('/patterns/arabic-circle.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .animate-spin-slow {
+    animation: spin 30s linear infinite;
+  }
+  
+  .animate-spin-slow-reverse {
+    animation: spin 40s linear infinite reverse;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .shadow-islamic {
+    box-shadow: 0 4px 20px rgba(45, 130, 44, 0.15);
+  }
+  
+  .glass-effect {
+    @apply bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg;
+  }
+  
+  .islamic-divider {
+    @apply my-8 h-px w-full relative overflow-hidden;
+    background: linear-gradient(90deg, transparent, var(--islamic-green-500), transparent);
+  }
+  
+  .islamic-divider::before {
+    content: '۝';
+    @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-islamic-gold-400 font-arabic text-xl;
+  }
+  
+  .arabesque-overlay {
+    @apply relative overflow-hidden;
+  }
+  
+  .arabesque-overlay::before {
+    content: '';
+    @apply absolute inset-0 bg-islamic-pattern opacity-5;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-islamic-green-600 to-islamic-blue-600;
+  }
 }

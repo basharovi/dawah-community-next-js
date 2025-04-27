@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaMosque } from "react-icons/fa";
+import { FaMosque, FaSun, FaMoon } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,14 +45,21 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-lg py-2" : "bg-white/95 py-4"}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-500 ${
+      scrolled 
+        ? "bg-white shadow-lg py-2" 
+        : "bg-white/90 backdrop-filter backdrop-blur-lg py-4"
+    }`}>
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-6">
         <div className="flex items-center">
           <div className="flex items-center">
-            <FaMosque className="h-6 w-6 text-blue-600 mr-2" />
-            <img src="/images/logo.png" alt="Logo" className="h-10 w-14 mr-2" />
+            {/* <div className="relative w-12 h-12 flex items-center justify-center mr-2 group">
+              <div className="absolute inset-0 bg-islamic-green-100 rounded-full transform transition-all duration-300 group-hover:scale-110"></div>
+              <FaMosque className="h-6 w-6 text-islamic-green-600 relative z-10" />
+            </div> */}
+            <img src="/images/logo.png" alt="Logo" className="h-10 w-16 mr-2" />
           </div>
-          <h1 className="text-lg md:text-xl font-medium text-gray-800">দাওয়াহ কমিউনিটি গোবিন্দগঞ্জ</h1>
+          <h1 className="text-lg md:text-xl font-medium text-gray-800 text-gradient">দাওয়াহ কমিউনিটি গোবিন্দগঞ্জ</h1>
         </div>
         
         {/* Desktop Navigation */}
@@ -70,16 +77,15 @@ export default function Navbar() {
               key={item.id}
               href={`#${item.id}`}
               onClick={handleLinkClick}
-              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
+              className={`nav-item ${
                 activeSection === item.id
-                  ? "text-blue-600 bg-blue-50"
-                  : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                  ? "nav-item-active"
+                  : "text-gray-600 hover:text-islamic-green-600 hover:bg-gray-50"
               }`}
             >
               {item.label}
               {activeSection === item.id && (
                 <motion.div
-                  className="h-1 bg-blue-500 mt-1 rounded-full"
                   layoutId="activeTab"
                   initial={false}
                 />
@@ -92,7 +98,7 @@ export default function Navbar() {
         <div className="md:hidden">
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none"
+            className="p-2 rounded-full text-gray-700 hover:bg-islamic-green-50 focus:outline-none focus:ring-2 focus:ring-islamic-green-300 transition-all duration-300"
             aria-expanded={isOpen}
           >
             <span className="sr-only">{isOpen ? 'Close menu' : 'Open menu'}</span>
@@ -121,7 +127,7 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white border-t"
+            className="md:hidden bg-white/95 backdrop-filter backdrop-blur-md border-t shadow-inner"
           >
             <div className="flex flex-col space-y-1 px-4 pt-2 pb-4">
               {[
@@ -137,15 +143,25 @@ export default function Navbar() {
                   key={item.id}
                   href={`#${item.id}`}
                   onClick={handleLinkClick}
-                  className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  className={`px-3 py-3 rounded-md text-sm font-medium transition-all duration-300 ${
                     activeSection === item.id
-                      ? "text-blue-600 bg-blue-50"
-                      : "text-gray-600 hover:text-blue-600"
+                      ? "text-islamic-green-600 bg-islamic-green-50 border-l-4 border-islamic-green-500 pl-4"
+                      : "text-gray-600 hover:text-islamic-green-600 hover:bg-gray-50 hover:pl-4"
                   }`}
                 >
                   {item.label}
                 </a>
               ))}
+              
+              <div className="pt-4 mt-2 border-t border-gray-100">
+                <a
+                  href="#contact"
+                  onClick={handleLinkClick}
+                  className="flex items-center justify-center px-4 py-3 rounded-full bg-islamic-green-600 text-white font-medium hover:bg-islamic-green-700 transition-all duration-300"
+                >
+                  যোগাযোগ করুন
+                </a>
+              </div>
             </div>
           </motion.div>
         )}

@@ -1,0 +1,17 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="arabic-circle-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path fill="none" stroke="#3da13d" stroke-width="0.5" d="M0,10 A10,10 0 0,1 10,0 A10,10 0 0,1 20,10 A10,10 0 0,1 10,20 A10,10 0 0,1 0,10 Z" />
+    </pattern>
+  </defs>
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#3da13d" stroke-width="1" />
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#3da13d" stroke-width="0.5" />
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#3da13d" stroke-width="0.25" />
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#3da13d" stroke-width="0.5" stroke-dasharray="5,5" />
+  <circle cx="100" cy="100" r="85" fill="url(#arabic-circle-pattern)" opacity="0.2" />
+  
+  <!-- Star pattern -->
+  <g transform="translate(100, 100)">
+    <path fill="none" stroke="#3da13d" stroke-width="0.75" d="M0,-60 L13.8,-18.8 L57.6,-18.8 L21.9,7.2 L35.7,48.4 L0,22.4 L-35.7,48.4 L-21.9,7.2 L-57.6,-18.8 L-13.8,-18.8 Z" />
+  </g>
+</svg> 
