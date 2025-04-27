@@ -42,35 +42,33 @@ const teamMembers = [
     name: "মাওলানা নাজমুস সাকিব", 
     role: "কার্যকরী সদস্য", 
     img: "/images/team/sakib.jpg",
-    bio: "ইসলামী শিক্ষায় শিক্ষিত।",
-    social: [
-      { type: "facebook", url: "https://facebook.com/" },
-    ]
+    bio: "",
+    social: []
   },
   { 
     name: "ইঞ্জিনিয়ার শাকিল", 
     role: "কার্যকরী সদস্য", 
     img: "/images/team/no_image.jpg",
-    bio: "ইঞ্জিনিয়ারিং গ্রাজুয়েট, সক্রিয় সমাজসেবক।",
+    bio: "",
     social: []
   },
   { 
     name: "মোহাম্মদ তালহা আমিন তামিম", 
     role: "কার্যকরী সদস্য", 
     img: "/images/team/no_image.jpg",
-    bio: "উদ্যোক্তা ও সমাজসেবক।",
+    bio: "",
     social: []
   },
   { 
     name: "মোহাম্মদ জুবায়ের ইসলাম", 
     role: "কার্যকরী সদস্য", 
     img: "/images/team/jobair.jpg",
-    bio: "ইসলামী কার্যক্রমে আগ্রহী ও সক্রিয়।",
+    bio: "",
     social: []
   },
   // Additional members can remain abbreviated
   { name: "মোহাম্মদ রশিদুল ইসলাম", role: "কার্যকরী সদস্য", img: "/images/team/no_image.jpg" },
-  { name: "মোহাম্মদ শহিদুল ইসলাম", role: "কার্যকরী সদস্য", img: "/images/team/no_image.jpg" },
+  { name: "মোহাম্মদ শহিদুল ইসলাম", role: "কার্যকরী সদস্য", img: "/images/team/shahidullah.jpg" },
   { name: "মোহাম্মদ শাহী", role: "কার্যকরী সদস্য", img: "/images/team/shahi.jpg" },
   { name: "মোহাম্মদ জাহিদ সরকার", role: "কার্যকরী সদস্য", img: "/images/team/zs_jahid.jpg" },
   { name: "মোহাম্মদ ফয়সাল", role: "কার্যকরী সদস্য", img: "/images/team/no_image.jpg" },
@@ -115,23 +113,7 @@ export default function Team() {
           </p>
         </motion.div>
 
-        {/* Quote */}
-        <motion.div
-          className="max-w-4xl mx-auto mb-16"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <div className="text-center bg-islamic-green-50 rounded-lg p-8 shadow-sm relative">
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-islamic-green-100 rounded-full w-10 h-10 flex items-center justify-center">
-              <FaQuoteLeft className="text-islamic-green-600" />
-            </div>
-            <p className="text-lg italic text-gray-700 mb-4">
-              "সবচেয়ে উত্তম ব্যক্তি সেই, যে মানুষের জন্য সবচেয়ে উপকারী।"
-            </p>
-            <p className="text-right text-islamic-green-700 font-medium">- হাদিস শরীফ</p>
-          </div>
-        </motion.div>
+        
 
         {/* Leaders Section - featured prominently */}
         <div className="mb-16">
@@ -141,7 +123,7 @@ export default function Team() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            আহবায়ক ও যুগ্ম আহবায়কবৃন্দ
+            কার্যনির্বাহী প্যানেল
           </motion.h3>
           <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-8">
             {teamMembers.slice(0, 4).map((member, index) => (

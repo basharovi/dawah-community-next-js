@@ -27,7 +27,7 @@ export default function Hero() {
         className="absolute bottom-32 right-1/4 w-12 h-12 bg-islamic-green-200 rounded-full"
       />
       
-      <div className="container mx-auto px-6 z-10 py-20">
+      <div className="container mx-auto px-6 py-20">
         <div className="flex flex-col md:flex-row items-center">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}

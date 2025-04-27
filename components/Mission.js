@@ -127,41 +127,8 @@ export default function Mission() {
             </motion.div>
           ))}
         </div>
-        
-        {/* Quranic Verse */}
-        <motion.div
-          className="mt-20 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <div className="verse-box max-w-3xl mx-auto">
-            <div className="mb-4 flex justify-center">
-              <div className="h-8 w-8 rounded-full bg-islamic-gold-100 flex items-center justify-center">
-                <FaQuran className="text-islamic-gold-600 text-sm" />
-              </div>
-            </div>
-            <p className="text-islamic-green-900 flex items-center text-lg leading-relaxed mb-2">
-              <span className="font-arabic text-xl text-center w-full mb-4">ادْعُ إِلَىٰ سَبِيلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ ۖ وَجَادِلْهُم بِالَّتِي هِيَ أَحْسَنُ</span>
-              <span className="block text-center w-full">তুমি নিজ প্রতিপালকের পথে মানুষকে ডাকবে হিকমত ও সদুপদেশের মাধ্যমে আর (যদি কখনও বিতর্কের দরকার পড়ে, তবে) তাদের সাথে বিতর্ক করবে উৎকৃষ্ট পন্থায়।</span>
-            </p>
-            <p className="text-right text-sm text-islamic-green-700 mt-2">- সূরা নাহল, আয়াত ১২৫</p>
-          </div>
-          
-          <div className="mt-10 max-w-2xl mx-auto">
-            <p className="text-islamic-green-800 font-medium flex items-center text-lg bg-islamic-green-50 px-6 py-4 rounded-lg border border-islamic-green-100 shadow-sm">
-              <FaCheckCircle className="mr-3 text-islamic-green-600 flex-shrink-0" />
-              <span>আমরা বিশ্বাস করি, একতাবদ্ধ হয়ে ও সঠিক পদ্ধতিতে কাজ করলে আমাদের সমাজে ইতিবাচক পরিবর্তন আনা সম্ভব।</span>
-            </p>
-          </div>
-        </motion.div>
       </div>
       
-      {/* Islamic Divider */}
-      <div className="container mx-auto px-4 mt-16">
-        <div className="islamic-divider"></div>
-      </div>
     </section>
   );
 }
