@@ -1,37 +1,11 @@
-import { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import { FaFacebook, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaHeadset } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import ContactForm from '../components/ContactForm';
 
 export default function ContactUs() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormData({ name: '', email: '', message: '' });
-      
-      // Reset success message after 3 seconds
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 3000);
-    }, 1000);
-  };
+  // Use Formspree React hook (driven by NEXT_PUBLIC_FORMSPREE_FORM_ID env var)
+  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID);
 
   const contactInfo = [
     { 
@@ -100,7 +74,7 @@ export default function ContactUs() {
               </span>
               আমাদের মেসেজ দিন
             </h3>
-            {submitSuccess ? (
+            {state.succeeded ? (
               <div className="p-4 bg-islamic-green-50 text-islamic-green-700 rounded-md border border-islamic-green-200">
                 <div className="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-islamic-green-500" viewBox="0 0 20 20" fill="currentColor">
@@ -110,62 +84,7 @@ export default function ContactUs() {
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit}>
-                <div className="mb-4">
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">নাম</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-islamic-green-500 transition-all duration-300"
-                    placeholder="আপনার নাম লিখুন"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">ইমেইল</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-islamic-green-500 transition-all duration-300"
-                    placeholder="আপনার ইমেইল লিখুন"
-                  />
-                </div>
-                <div className="mb-6">
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">মেসেজ</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows="3"
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-islamic-green-500 transition-all duration-300"
-                    placeholder="আপনার মেসেজ লিখুন"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="islamic-button w-full flex items-center justify-center"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      পাঠানো হচ্ছে...
-                    </>
-                  ) : 'মেসেজ পাঠান'}
-                </button>
-              </form>
+              <ContactForm />
             )}
           </motion.div>
 
