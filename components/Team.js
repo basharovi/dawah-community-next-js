@@ -143,7 +143,7 @@ export default function Team() {
           >
             আহবায়ক ও যুগ্ম আহবায়কবৃন্দ
           </motion.h3>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-8">
             {teamMembers.slice(0, 4).map((member, index) => (
               <motion.div 
                 key={index}
@@ -153,11 +153,11 @@ export default function Team() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
               >
-                <div className="h-60 overflow-hidden relative">
+                <div className="h-60 sm:h-52 md:h-60 overflow-hidden relative">
                   <img 
                     src={member.img} 
                     alt={member.name} 
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    className="w-full h-full object-contain sm:object-cover md:object-cover transition-transform duration-300 hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </div>

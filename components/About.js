@@ -82,7 +82,7 @@ export default function About() {
                   <div className="pt-4 mt-4 border-t border-gray-100">
                     <span className="inline-flex items-center text-sm font-medium text-islamic-blue-600">
                       <FaHandsHelping className="mr-2" />
-                      <span>সাম্প্রদায়িক বন্ধন</span>
+                      <span>মুসলিম ঐক্য</span>
                     </span>
                   </div>
                 </div>
@@ -117,7 +117,7 @@ export default function About() {
           </div>
           
           {/* Stats Section */}
-          <motion.div 
+          {/* <motion.div 
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -159,7 +159,7 @@ export default function About() {
                 <p className="text-gray-600">বছরের অভিজ্ঞতা</p>
               </div>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
       

@@ -144,7 +144,7 @@ export default function Mission() {
             </div>
             <p className="text-islamic-green-900 flex items-center text-lg leading-relaxed mb-2">
               <span className="font-arabic text-xl text-center w-full mb-4">ادْعُ إِلَىٰ سَبِيلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ ۖ وَجَادِلْهُم بِالَّتِي هِيَ أَحْسَنُ</span>
-              <span className="block text-center w-full">তুমি মানুষকে তোমার প্রভুর পথে ডাকো প্রজ্ঞা ও উত্তম উপদেশ দ্বারা এবং তাদের সাথে আলোচনা করো উত্তম পন্থায়।</span>
+              <span className="block text-center w-full">তুমি নিজ প্রতিপালকের পথে মানুষকে ডাকবে হিকমত ও সদুপদেশের মাধ্যমে আর (যদি কখনও বিতর্কের দরকার পড়ে, তবে) তাদের সাথে বিতর্ক করবে উৎকৃষ্ট পন্থায়।</span>
             </p>
             <p className="text-right text-sm text-islamic-green-700 mt-2">- সূরা নাহল, আয়াত ১২৫</p>
           </div>

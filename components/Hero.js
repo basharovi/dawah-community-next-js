@@ -84,7 +84,7 @@ export default function Hero() {
               <p className="text-sm italic text-gray-600">
                 <span className="font-arabic text-base">"وَمَنْ أَحْسَنُ قَوْلًا مِّمَّن دَعَا إِلَى اللَّهِ وَعَمِلَ صَالِحًا وَقَالَ إِنَّنِي مِنَ الْمُسْلِمِينَ"</span>
                 <br />
-                <span className="block mt-2">আর যে আল্লাহর দিকে মানুষকে আহ্বান করে, নেক আমল করে এবং বলে, 'আমি মুসলিম' তার চেয়ে উত্তম কথা আর কার?</span>
+                <span className="block mt-2">তার চেয়ে উত্তম কথা আর কার হতে পারে, যে আল্লাহর দিকে ডাকে, সৎকর্ম করে এবং বলে, আমি আনুগত্য স্বীকারকারীদের একজন।</span>
                 <span className="block text-xs text-right mt-1 text-islamic-green-700">- সূরা ফুসসিলাত, আয়াত ৩৩</span>
               </p>
             </motion.div>
